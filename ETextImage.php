@@ -72,7 +72,7 @@ class ETextImage extends CWidget
         public function run()
         {
                 $this->text=urlencode(base64_encode($this->text));
-                $url=Yii::app()->createUrl($this->getController()->getId()."/".$this->thisAction);
+                $url=Yii::app()->createUrl("/site/".$this->thisAction);
 		$url.='?text='.$this->text;
 		$url.='&fontSize='.$this->fontSize;
 		$url.='&fontFile='.$this->fontFile;
